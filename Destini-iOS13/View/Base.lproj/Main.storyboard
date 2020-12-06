@@ -25,8 +25,8 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7U-JC-22t">
                                         <rect key="frame" x="0.0" y="0.0" width="358" height="566"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMh-gK-25q">
@@ -34,16 +34,26 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="Dgi-Ro-jtb"/>
                                         </constraints>
-                                        <state key="normal" title="ButtonTop" backgroundImage="choice1Background">
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Choice 1" backgroundImage="choice1Background">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="txI-7W-NhO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNF-sJ-Pd2">
                                         <rect key="frame" x="0.0" y="666" width="358" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="i6w-TL-xZC"/>
                                         </constraints>
-                                        <state key="normal" title="ButtonBottom" backgroundImage="choice2Background"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Choice 2" backgroundImage="choice2Background">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IUA-BO-jcL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -61,6 +71,11 @@
                             <constraint firstItem="JAs-34-4pk" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="xBj-9S-rnG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="choice1Button" destination="XMh-gK-25q" id="SZa-QY-UvA"/>
+                        <outlet property="choice2Button" destination="VNF-sJ-Pd2" id="BBe-c2-1RP"/>
+                        <outlet property="storyLabel" destination="n7U-JC-22t" id="WSg-9H-w4e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
