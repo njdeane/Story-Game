@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var choice1Button: UIButton!
     @IBOutlet weak var choice2Button: UIButton!
     
+    var storyPosition = 0
+    
     let stories = [
         Story(title: "You see a fork in the road.", choice1: "Take a left.", choice2: "Take a right."), // this needs to be the load default
         Story(title: "You see a tiger.", choice1: "Shout for help.", choice2: "Play dead."),
@@ -29,15 +31,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func choiceMade(_ sender: UIButton) {
-        print(sender.currentTitle)
         if sender.currentTitle == "Take a left." {
-            storyLabel.text = stories[1].title
-            choice1Button.setTitle(stories[1].choice1, for: .normal)
-            choice2Button.setTitle(stories[1].choice2, for: .normal)
+            storyPosition += 1
+            storyLabel.text = stories[storyPosition].title
+            choice1Button.setTitle(stories[storyPosition].choice1, for: .normal)
+            choice2Button.setTitle(stories[storyPosition].choice2, for: .normal)
         } else {
-            storyLabel.text = stories[2].title
-            choice1Button.setTitle(stories[2].choice1, for: .normal)
-            choice2Button.setTitle(stories[2].choice2, for: .normal)
+            storyPosition += 2
+            storyLabel.text = stories[storyPosition].title
+            choice1Button.setTitle(stories[storyPosition].choice1, for: .normal)
+            choice2Button.setTitle(stories[storyPosition].choice2, for: .normal)
         }
         
     }
@@ -45,5 +48,4 @@ class ViewController: UIViewController {
 }
 
 
-//choice1Button.setTitle(stories[0].choice1, for: .normal)
-//choice2Button.setTitle(stories[0].choice2, for: .normal)
+
