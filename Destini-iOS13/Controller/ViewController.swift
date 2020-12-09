@@ -17,10 +17,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let story = Story(title: "You see a fork in the road.", choice1: "Take a left.", choice2: "Take a right.")
-        storyLabel.text = story.title
-        choice1Button.setTitle(story.choice1, for: .normal)
-        choice2Button.setTitle(story.choice2, for: .normal)
+        let stories = [
+            Story(title: "You see a fork in the road.", choice1: "Take a left.", choice2: "Take a right."),
+            Story(title: "You see a tiger.", choice1: "Shout for help.", choice2: "Play dead."),
+            Story(title: "You find a treasure chest.", choice1: "Open it.", choice2: "Check for traps.")
+        ]
+        
+        storyLabel.text = stories[0].title
+        choice1Button.setTitle(stories[0].choice1, for: .normal)
+        choice2Button.setTitle(stories[0].choice2, for: .normal)
     }
 
     @IBAction func choiceMade(_ sender: UIButton) {
