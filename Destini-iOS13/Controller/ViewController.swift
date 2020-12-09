@@ -22,6 +22,12 @@ class ViewController: UIViewController {
         Story(title: "You find a treasure chest.", choice1: "Open it.", choice2: "Check for traps.")
     ]
     
+    func updateUI() {
+        storyLabel.text = stories[storyPosition].title
+        choice1Button.setTitle(stories[storyPosition].choice1, for: .normal)
+        choice2Button.setTitle(stories[storyPosition].choice2, for: .normal)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,14 +39,10 @@ class ViewController: UIViewController {
     @IBAction func choiceMade(_ sender: UIButton) {
         if sender.currentTitle == "Take a left." {
             storyPosition += 1
-            storyLabel.text = stories[storyPosition].title
-            choice1Button.setTitle(stories[storyPosition].choice1, for: .normal)
-            choice2Button.setTitle(stories[storyPosition].choice2, for: .normal)
+            updateUI()
         } else {
             storyPosition += 2
-            storyLabel.text = stories[storyPosition].title
-            choice1Button.setTitle(stories[storyPosition].choice1, for: .normal)
-            choice2Button.setTitle(stories[storyPosition].choice2, for: .normal)
+            updateUI()
         }
         
     }
