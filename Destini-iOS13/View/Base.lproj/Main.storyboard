@@ -35,7 +35,7 @@
                                             <constraint firstAttribute="height" constant="100" id="Dgi-Ro-jtb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Choice 1" backgroundImage="choice1Background">
+                                        <state key="normal" title="Choice1" backgroundImage="choice1Background">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -48,7 +48,7 @@
                                             <constraint firstAttribute="height" constant="100" id="i6w-TL-xZC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Choice 2" backgroundImage="choice2Background">
+                                        <state key="normal" title="Choice2" backgroundImage="choice2Background">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
